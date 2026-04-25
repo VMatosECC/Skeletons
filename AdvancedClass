@@ -1,0 +1,41 @@
+#include <iostream>
+#include <sstream>
+#include <string>
+using namespace std;
+
+
+class MyClass {
+private:
+    // Private members
+    // Private methods (hidden utilities)
+
+public:
+    // Public members (unusual!)
+    // Mutators / setters (one for each attribute)
+    // Accessors / getters (const - one for each attribute)
+    // Constructors (condensed parameterized with default values)
+    // Copy constructor (if needed, otherwise the compiler provides a default)
+    // Destructor (if needed, otherwise the compiler provides a default)
+
+    // User-defined methods (behaviors of the class)
+    string toString() {
+        stringstream sout;
+        // Format the string representation of the object
+        return sout.str();
+    }
+
+    MyClass operator=(const MyClass& other) {
+        // Implement assignment logic (if needed)
+        // Perhaps: *this = other; 
+        // Be careful with self-assignment and deep copying if necessary
+        return *this; // Return the current object after assignment
+    }
+
+    friend ostream& operator<<(ostream& sout, const MyClass& obj) {
+        // Implement output logic (if needed). 
+        // Format the output of the object
+        // Perhaps: sout << obj.toString();
+        return sout;
+    }
+
+};

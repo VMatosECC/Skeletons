@@ -1,0 +1,22 @@
+#include <iostream>
+#include <sstream>
+#include <string>
+using namespace std;
+
+class MyClass {
+private:
+    // Private members
+
+public:
+    // Mutators / setters (one for each attribute)
+    // Accessors / getters (const - one for each attribute)
+    // Constructors (condensed parameterized with default values)
+    // Destructor (if needed, otherwise the compiler provides a default)
+
+    // User-defined methods (behaviors of the class)
+    string toString() {
+        stringstream sout;
+        // Format the string representation of the object
+        return sout.str();
+    }
+};

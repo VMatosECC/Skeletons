@@ -113,9 +113,9 @@ ClassName& ClassName::operator=(const ClassName& rhs)
 string ClassName::toString() const
 {
     stringstream sout;
-    sout << "memberInt: " << memberInt
-        << ", memberDouble: " << memberDouble
-        << ", memberString: " << memberString;
+    sout << "memberInt: " << getMemberInt()
+        << ", memberDouble: " << getMemberDouble()
+        << ", memberString: " << getMemberString();
     return sout.str();
 }
 
